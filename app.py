@@ -17,7 +17,6 @@ def index():
 
 @app.route('/predict',methods=['GET','POST'])
 def predict():
-    print(request.files)
     if request.method == 'POST':
         image_file = request.files['file']
         path = os.path.join(app.config['UPLOAD_FOLDER'], image_file.filename)
